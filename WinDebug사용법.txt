@@ -1,0 +1,21 @@
+[Win Debug 사용법]
+1. Win debug로 dump 파일 로드 
+  - File - Open Crash Dump로 덤프 파일 로드
+
+2. 덤프 파일이 생긴 exe의 Time Stamp 확인
+  - lmvm [EXE명] 
+ ex) lmvm SMARTConsole
+
+3. symbol 파일 경로 지정
+ .sympath [파일경로]  - dump파일의 파일 경로
+ .sympath+ SRV*c:\tmp*http://msdl.microsoft.com/download/symbols  -  OS심볼을 웹에서 다운로드 함 (c:\tmp는 다른 특정경로로 수정해도 됨)
+
+.sympath 로 지금 지정된 symbol 파일 경로를 확인 할 수 있음
+
+4. .reload
+
+5. exepath 설정 (옵션 - 해도 되고 안해도 됨)
+ -  .exepath [파일경로] - exe, dll 파일의 경로를 설정
+
+6. 분석
+  - !analyze -v
